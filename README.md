@@ -35,18 +35,31 @@ TCDGI consistently ranked best across SSIM / SNR / PSNR in repeated comparison r
 ## Repository structure
 
 src/
+
 TCDGI.py # Core TCDGI algorithm + adaptive threshold selection
+
 cryptosystem.py # TcdgiImageCryptosystem: encrypt/decrypt pipeline
+
 compare.py # GI / DGI / TCDGI comparison harness
+
 metrics.py # Decryption quality metrics (SSIM, PSNR, entropy, edge preservation, ...)
+
 analysis.py # Encrypted-data analysis and visualization
+
 run_pipeline.py # End-to-end analysis entry point
+
 examples/
+
 sample_images/ # Small set of test images
+
 results/
+
 sample_comparison/ # Selected comparison figures + metric reports
+
 docs/
+
 thesis_summary.md # English summary of method and findings
+
 
 ## Running it
 
