@@ -1,0 +1,35 @@
+Ghost Imaging Algorithm Comprehensive Comparison Report
+========================
+
+NOTE: This is a demo export and is not intended to exactly reproduce the
+thesis headline metrics (GI/DGI SNR=0.9590, SSIM=0.4680; TCDGI SNR=1.2581,
+SSIM=0.6376; see docs/thesis_summary.md). Although this run uses the same
+nominal frames/threshold/filter-sigma as the thesis configuration, the
+absolute SNR/SSIM values below differ because no random seed was fixed for
+the speckle sequence and the input image/preprocessing differs from the
+thesis run. TCDGI still ranks best across SSIM/SNR/PSNR, consistent with the
+thesis conclusion.
+
+Analysis time: 20250501_212121
+Test image: local source image used for this demo export (examples/sample_images/sample.jpg)
+Number of frames: 5000
+Speckle size: 2.5
+
+Test parameters:
+  Threshold list: [9.6429]
+  Filter sigma list: [2.5]
+  Weighted average: Yes
+  Edge enhancement: No
+  Iterative optimization: No
+Test result summary:
+  Total methods tested: 4
+  Best method: TCDGI_T9.64_S2.5_W
+  Best SSIM: 0.6740
+  Best SNR: 1.3797
+  Best PSNR: 16.7006
+
+Performance ranking of all methods (sorted by SNR):
+  1. TCDGI_T9.64_S2.5_W - SSIM:0.6740, SNR:1.3797, PSNR:16.7006
+  2. GI - SSIM:0.5222, SNR:1.1816, PSNR:15.3544
+  3. DGI - SSIM:0.5222, SNR:1.1816, PSNR:15.3544
+  4. Weighted_GI - SSIM:0.4843, SNR:1.1357, PSNR:15.0100
